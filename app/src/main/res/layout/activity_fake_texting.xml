@@ -17,10 +17,11 @@
         android:enabled="false"
         android:id="@+id/textView" />
 
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <EditText
+        android:text="test"
+        android:enabled="true"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -38,35 +39,16 @@
         android:layout_marginTop="34dp"
         android:id="@+id/textView3" />
 
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <EditText
+        android:text="test"
+        android:enabled="true"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="44dp"
         android:id="@+id/textView4" />
-
-    <TextView
-        android:text="Enter Date &amp; Time (or NOW for now)"
-        android:enabled="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_toEndOf="@+id/textView4"
-        android:id="@+id/textView5" />
-
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_toEndOf="@+id/textView4"
-        android:layout_marginTop="37dp"
-        android:id="@+id/textView6" />
 
     <Button
         android:text="Generate"
@@ -75,6 +57,27 @@
         android:id="@+id/button"
         android:layout_marginTop="87dp"
         android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Enter Date &amp; Time (or NOW for now)"
+        android:enabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:text="test"
+        android:enabled="true"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
