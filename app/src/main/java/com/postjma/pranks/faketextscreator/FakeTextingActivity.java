@@ -52,38 +52,14 @@ public class FakeTextingActivity extends AppCompatActivity {
                 String phoneNo = getText(mPhone);
                 String msg = getText(mMsg);
                 String datestr = getText(mDate);
-                Date date;
-                SimpleDateFormat format = new SimpleDateFormat();
-
-                if (datestr.trim().toUpperCase().equals("NOW")) {
-                    date = new Date(System.currentTimeMillis());
-                } else {
-                    try {
-                        date = format.parse(datestr);
-                    } catch (ParseException p) {
-                        mDate.setText("");
-                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(mThis);
-                        alertDialog.setMessage("Could not parse the date and time.");
-                        alertDialog.setTitle("Error");
-                        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                finish();
-                            }
-                        });
-                        alertDialog.setCancelable(false);
-                        alertDialog.create().show();
-                        return;
-                    }
-                }
 
                 ContentValues cv = new ContentValues();
                 cv.put("address", phoneNo);
                 cv.put("body", msg);
                 cv.put("read", 0);
-                cv.put("date", date.toString());
+                cv.put("date", datestr);
 
-                //getContentResolver().insert(Uri.parse("content://sms/inbox"), cv);
+                getContentResolver().insert(Uri.parse("content://sms/inbox"), cv);
 
                 mPhone.setText("");
                 mMsg.setText("");
